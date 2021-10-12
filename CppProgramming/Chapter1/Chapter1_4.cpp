@@ -1,6 +1,6 @@
 /*
-	Chapter 1   C++ÀÇ ±âÃÊÀûÀÎ »ç¿ë¹ı
-	Chapter 1.4 ÀÔÃâ·Â ½ºÆ®¸² cin, cout
+	Chapter 1   C++ì˜ ê¸°ì´ˆì ì¸ ì‚¬ìš©ë²•
+	Chapter 1.4 ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ cin, cout
 */
 
 #include <iostream>		// cout, cin, endl, ...
@@ -17,26 +17,26 @@ int main1_4()
 	std::cout << "x is " << x << std::endl;
 	
 	double pi = 3.141592;
-	std::cout << "pi is " << pi << std::endl;				// 3.14159¿¡¼­ Â©¸² -> Á¤¹Ğµµ Á¶Á¤ ÇÊ¿ä
+	std::cout << "pi is " << pi << std::endl;				// 3.14159ì—ì„œ ì§¤ë¦¼ -> ì •ë°€ë„ ì¡°ì • í•„ìš”
 
-	std::cout << "abc" << "\t" << "def" << std::endl;		// '\t' -> tab
-	std::cout << "ab" << "\t" << "cdef" << std::endl;		// '\t' -> ÀÚµ¿À¸·Î ÁÙ¸ÂÃã ÇØÁÜ -> Ãâ·Â ½Ã ºó°ø°£ µÎ°í ÁÙ¸ÂÃãÀ» ¿øÇÒ ¶§ »ç¿ë
+	std::cout << "abc" << "\t" << "def" << std::endl;			// '\t' -> tab
+	std::cout << "ab" << "\t" << "cdef" << std::endl;			// '\t' -> ìë™ìœ¼ë¡œ ì¤„ë§ì¶¤ í•´ì¤Œ -> ì¶œë ¥ ì‹œ ë¹ˆê³µê°„ ë‘ê³  ì¤„ë§ì¶¤ì„ ì›í•  ë•Œ ì‚¬ìš©
+	
+	std::cout << "hello world 3\n\n";					// '\n' -> endlê³¼ ë¹„ìŠ·í•œ ê¸°ëŠ¥ ìˆ˜í–‰ (ê°™ì§€ëŠ” ì•ŠìŒ)
 
-	std::cout << "hello world 3\n\n";						// '\n' -> endl°ú ºñ½ÁÇÑ ±â´É ¼öÇà (°°Áö´Â ¾ÊÀ½)
 
+using namespace std;								// ì´ ë¬¸ì¥ ë’¤ë¡œ ì¤‘ê´„í˜¸ê°€ ëë‚˜ëŠ” ê³³ê¹Œì§€ëŠ” std ì“°ì§€ ì•Šì•„ë„ ë¨
+	cout << "hello world 4" << endl;					// ì»´íŒŒì¼ëŸ¬ê°€ cout, endlì„ ë§Œë‚  ë•Œ stdë¼ëŠ” namespaceì—ì„œ ì•Œì•„ì„œ ì°¾ì•„ì„œ ì»´íŒŒì¼ í•´ì¤Œ
 
-	using namespace std;									// ÀÌ ¹®Àå µÚ·Î Áß°ıÈ£°¡ ³¡³ª´Â °÷±îÁö´Â std ¾²Áö ¾Ê¾Æµµ µÊ
-	cout << "hello world 4" << endl;						// ÄÄÆÄÀÏ·¯°¡ cout, endlÀ» ¸¸³¯ ¶§ std¶ó´Â namespace¿¡¼­ ¾Ë¾Æ¼­ Ã£¾Æ¼­ ÄÄÆÄÀÏ ÇØÁÜ
+	cout << "\a" << endl;							// '\a' -> ì†Œë¦¬ ì¶œë ¥ (audio)
 
-	cout << "\a" << endl;									// '\a' -> ¼Ò¸® Ãâ·Â (audio)
-
-	// cout°ú ºñ½ÁÇÑ printf 
+	// coutê³¼ ë¹„ìŠ·í•œ printf 
 
 
 
 	// 2. Console In (cin)
 	int y;
-	cin >> y;												// '>>' -> Input Operator
+	cin >> y;								// '>>' -> Input Operator
 
 	cout << "Your input is " << y << endl;
 
