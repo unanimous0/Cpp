@@ -15,7 +15,7 @@ int main1_2(void)
 	x = 5;
 	int y = x + 3; 
 	*/
-	
+
 	/*std::cout << y << std::endl;*/
 
 	return 0;
