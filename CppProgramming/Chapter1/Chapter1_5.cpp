@@ -1,6 +1,6 @@
 /*
-	Chapter 1   C++ÀÇ ±âÃÊÀûÀÎ »ç¿ë¹ı
-	Chapter 1.5 ÇÔ¼ö
+	Chapter 1   C++ì˜ ê¸°ì´ˆì ì¸ ì‚¬ìš©ë²•
+	Chapter 1.5 í•¨ìˆ˜
 */
 
 #include <iostream>
@@ -12,7 +12,7 @@ void print()
 	cout << "Hello" << endl;
 }
 
-// ÇÔ¼ö¸í ¿ìÅ¬¸¯ Rename -> ÇØ´ç ÇÔ¼ö¿Í ÇÔ¼ö »ç¿ë ÄÚµå¿¡¼­ ÇÔ¼ö¸íÀ» ÀÚµ¿À¸·Î ¹Ù²ãÁÜ
+// í•¨ìˆ˜ëª… ìš°í´ë¦­ Rename -> í•´ë‹¹ í•¨ìˆ˜ì™€ í•¨ìˆ˜ ì‚¬ìš© ì½”ë“œì—ì„œ í•¨ìˆ˜ëª…ì„ ìë™ìœ¼ë¡œ ë°”ê¿”ì¤Œ
 int addTwoNumbers(int num_a, int num_b)		// Parameters 
 {
 	int sum = num_a + num_b;
@@ -20,8 +20,8 @@ int addTwoNumbers(int num_a, int num_b)		// Parameters
 	print();		
 	
 	/*
-	* Python°ú ´Ù¸£°Ô c++Àº ÇÔ¼ö ¾È¿¡¼­ ÇÔ¼ö¸¦ Á¤ÀÇÇÒ ¼ö ¾øÀ½ -> »ç¿ëµÇ±â Àü¿¡ Á¤ÀÇ µÇ¾î¾ß ÇÔ (µ¿ÀÏÇÑ nested line¿¡¼­.)
-	* (´Ü, nested class´Â °¡´ÉÇÔ)
+	* Pythonê³¼ ë‹¤ë¥´ê²Œ c++ì€ í•¨ìˆ˜ ì•ˆì—ì„œ í•¨ìˆ˜ë¥¼ ì •ì˜í•  ìˆ˜ ì—†ìŒ -> ì‚¬ìš©ë˜ê¸° ì „ì— ì •ì˜ ë˜ì–´ì•¼ í•¨ (ë™ì¼í•œ nested lineì—ì„œ.)
+	* (ë‹¨, nested classëŠ” ê°€ëŠ¥í•¨)
 	
 		void print()
 		{
@@ -32,14 +32,14 @@ int addTwoNumbers(int num_a, int num_b)		// Parameters
 	return sum;
 }
 
-// ÇÔ¼ö¸í ¿ìÅ¬¸¯ Rename -> ÇØ´ç ÇÔ¼ö¿Í ÇÔ¼ö »ç¿ë ÄÚµå¿¡¼­ ÇÔ¼ö¸íÀ» ÀÚµ¿À¸·Î ¹Ù²ãÁÜ
+// í•¨ìˆ˜ëª… ìš°í´ë¦­ Rename -> í•´ë‹¹ í•¨ìˆ˜ì™€ í•¨ìˆ˜ ì‚¬ìš© ì½”ë“œì—ì„œ í•¨ìˆ˜ëª…ì„ ìë™ìœ¼ë¡œ ë°”ê¿”ì¤Œ
 void printHellowWorld()
 {
 	cout << "HelloWorld" << endl;
 
-	//return;		// return ÇÒ°Ô ¾ø´Â °æ¿ì ¾Æ¹« °Íµµ ¾²Áö ¾Ê°Å³ª, return; ¸¸ ¾²°Å³ª ÇÒ ¼ö ÀÖÀ½
+	//return;		// return í• ê²Œ ì—†ëŠ” ê²½ìš° ì•„ë¬´ ê²ƒë„ ì“°ì§€ ì•Šê±°ë‚˜, return; ë§Œ ì“°ê±°ë‚˜ í•  ìˆ˜ ìˆìŒ
 }
-
+	
 int main1_5()
 {
 	cout << addTwoNumbers(1, 2) << endl;	// Arguments
