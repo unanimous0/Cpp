@@ -1,9 +1,9 @@
 /*
-	Chapter 1   C++ÀÇ ±âÃÊÀûÀÎ »ç¿ë¹ı
-	Chapter 1.1 ÇÁ·Î±×·¥ÀÇ ±¸Á¶
+	Chapter 1   C++ì˜ ê¸°ì´ˆì ì¸ ì‚¬ìš©ë²•
+	Chapter 1.1 í”„ë¡œê·¸ë¨ì˜ êµ¬ì¡°
 */
 
-#include <iostream>		// Preprocessor Directive (ÀüÃ³¸®±â)
+#include <iostream>		// Preprocessor Directive (ì „ì²˜ë¦¬ê¸°)
 
 int main1_1(void)
 {
@@ -12,6 +12,6 @@ int main1_1(void)
 	int y = x + 3;
 
 	std::cout << y << std::endl;
-
+	
 	return 0;
 }
