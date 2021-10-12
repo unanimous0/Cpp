@@ -1,21 +1,21 @@
 /*
-	Chapter 1   C++ÀÇ ±âÃÊÀûÀÎ »ç¿ë¹ı
-	Chapter 1.2 ÁÖ¼® comments
+	Chapter 1   C++ì˜ ê¸°ì´ˆì ì¸ ì‚¬ìš©ë²•
+	Chapter 1.2 ì£¼ì„ comments
 */
 
 #include <iostream>		
 
 int main1_2(void)
 {
-	//ÁÖ¼® ÀÛ¼º Ä¿¸Çµå: ctrl + k c
-	//ÁÖ¼® ÇØÁ¦ Ä¿¸Çµå: ctrl + k u
+	//ì£¼ì„ ì‘ì„± ì»¤ë§¨ë“œ: ctrl + k c
+	//ì£¼ì„ í•´ì œ ì»¤ë§¨ë“œ: ctrl + k u
 
 	// int x = 2;
 	/* 
 	x = 5;
 	int y = x + 3; 
 	*/
-
+	
 	/*std::cout << y << std::endl;*/
 
 	return 0;
