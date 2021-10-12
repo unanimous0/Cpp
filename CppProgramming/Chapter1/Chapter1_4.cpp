@@ -36,7 +36,7 @@ int main1_4()
 
 	// 2. Console In (cin)
 	int y;
-	cin >> y;			// '>>' -> Input Operator
+	cin >> y;												// '>>' -> Input Operator
 
 	cout << "Your input is " << y << endl;
 
