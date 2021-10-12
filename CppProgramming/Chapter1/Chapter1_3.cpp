@@ -1,44 +1,44 @@
 /*
-	Chapter 1   C++ÀÇ ±âÃÊÀûÀÎ »ç¿ë¹ý
-	Chapter 1.3 º¯¼ö (Variables)
+	Chapter 1   C++ì˜ ê¸°ì´ˆì ì¸ ì‚¬ìš©ë²•
+	Chapter 1.3 ë³€ìˆ˜ (Variables)
 */
 
 /*
-	1. °´Ã¼ (Objects)
-		- °´Ã¼´Â ¸Þ¸ð¸®¿¡¼­ °ø°£À» Â÷ÁöÇÔ
+	1. ê°ì²´ (Objects)
+		- ê°ì²´ëŠ” ë©”ëª¨ë¦¬ì—ì„œ ê³µê°„ì„ ì°¨ì§€í•¨
 
-	2. º¯¼ö (Variables)
-		- º¯¼öµµ °´Ã¼¶ó°í ÇÒ ¼ö ÀÖÀ½
+	2. ë³€ìˆ˜ (Variables)
+		- ë³€ìˆ˜ë„ ê°ì²´ë¼ê³  í•  ìˆ˜ ìžˆìŒ
 
-	3. L -values¿Í R-values (Left/Right)
-		- ±¸ºÐ ±âÁØ: ¸Þ¸ð¸® ÁÖ¼Ò¸¦ ÇÁ·Î±×·¡¸Ó°¡ Á÷Á¢ÀûÀ¸·Î Á¢±ÙÇÒ ¼ö ÀÖ´ÂÁöÀÇ ¿©ºÎ
+	3. L -valuesì™€ R-values (Left/Right)
+		- êµ¬ë¶„ ê¸°ì¤€: ë©”ëª¨ë¦¬ ì£¼ì†Œë¥¼ í”„ë¡œê·¸ëž˜ë¨¸ê°€ ì§ì ‘ì ìœ¼ë¡œ ì ‘ê·¼í•  ìˆ˜ ìžˆëŠ”ì§€ì˜ ì—¬ë¶€
 
-	4. ÃÊ±âÈ­ (Initialization)¿Í ´ëÀÔ (Assignment)
+	4. ì´ˆê¸°í™” (Initialization)ì™€ ëŒ€ìž… (Assignment)
 
-	5. ÃÊ±âÈ­¸¦ ¾ÈÇßÀ» ¶§ÀÇ ¹®Á¦Á¡
-		- Debug ¸ðµå¿¡¼­´Â ÃÊ±âÈ­ ¾ÈÇÑ °æ¿ì ¿¡·¯ ¸Þ¼¼Áö¸¦ ³ªÅ¸³¿
-		- Release ¸ðµå¿¡¼­´Â ÃÊ±âÈ­ ¾ÈÇÑ °æ¿ì ÄÄÆÄÀÏ·¯°¡ ÀÓÀÇ·Î °ªÀ» ´ëÀÔÇÏ¿© ¿¡·¯¸¦ ¾ø¾Ú (warningÀº ¶È°°ÀÌ ¶ä)
-		- ¸Þ¸ð¸® °øÀ¯·Î ÀÎÇÑ Garbage ¹®Á¦ 
+	5. ì´ˆê¸°í™”ë¥¼ ì•ˆí–ˆì„ ë•Œì˜ ë¬¸ì œì 
+		- Debug ëª¨ë“œì—ì„œëŠ” ì´ˆê¸°í™” ì•ˆí•œ ê²½ìš° ì—ëŸ¬ ë©”ì„¸ì§€ë¥¼ ë‚˜íƒ€ëƒ„
+		- Release ëª¨ë“œì—ì„œëŠ” ì´ˆê¸°í™” ì•ˆí•œ ê²½ìš° ì»´íŒŒì¼ëŸ¬ê°€ ìž„ì˜ë¡œ ê°’ì„ ëŒ€ìž…í•˜ì—¬ ì—ëŸ¬ë¥¼ ì—†ì•° (warningì€ ë˜‘ê°™ì´ ëœ¸)
+		- ë©”ëª¨ë¦¬ ê³µìœ ë¡œ ì¸í•œ Garbage ë¬¸ì œ 
 */
 
 #include <iostream>
 
 int main1_3()
 {
-	// X ¶ó´Â º¯¼ö ÀÌ¸§ÀÌ °¡¸®Å°°í ÀÖ´Â ¸Þ¸ð¸® °ø°£¿¡ 123ÀÌ¶ó´Â Á¤¼ö¸¦ ÀúÀåÇÑ´Ù.
+	// X ë¼ëŠ” ë³€ìˆ˜ ì´ë¦„ì´ ê°€ë¦¬í‚¤ê³  ìžˆëŠ” ë©”ëª¨ë¦¬ ê³µê°„ì— 123ì´ë¼ëŠ” ì •ìˆ˜ë¥¼ ì €ìž¥í•œë‹¤.
 	int x = 123;	// Initialization
-	x = 456;		// Assignment -> '=' ¸¦ Assignment Operator ¶ó°í ÇÔ 
+	x = 456;		// Assignment -> '=' ë¥¼ Assignment Operator ë¼ê³  í•¨ 
 
-	std::cout << x << std::endl;		// º¯¼ö xÀÇ ÀÌ¸§ (Ã¶¼ö³× Áý)
-	std::cout << &x << std::endl;		// º¯¼ö xÀÇ ÁÖ¼Ò°ª (ÇÑ³²´õÈú Aµ¿ 301È£)
+	std::cout << x << std::endl;		// ë³€ìˆ˜ xì˜ ì´ë¦„ (ì² ìˆ˜ë„¤ ì§‘)
+	std::cout << &x << std::endl;		// ë³€ìˆ˜ xì˜ ì£¼ì†Œê°’ (í•œë‚¨ë”íž Aë™ 301í˜¸)
 
 	int y;
 	y = 789;
-	y = y + 11;		// y+11µµ R-value (y ÀÖ´Ù°í L-value ¾Æ´Ô -> y°¡ °¡Áö°í ÀÖ´Â °ªÀÌ R-value·Î¼­ »ç¿ëµÇ´Â °Í)
+	y = y + 11;		// y+11ë„ R-value (y ìžˆë‹¤ê³  L-value ì•„ë‹˜ -> yê°€ ê°€ì§€ê³  ìžˆëŠ” ê°’ì´ R-valueë¡œì„œ ì‚¬ìš©ë˜ëŠ” ê²ƒ)
 	/*
-		¿ÞÂÊ¿¡ ÀÖ´Â °Í -> º¯¼ö y°¡ L-value -> ¸Þ¸ð¸®¿¡ ÁÖ¼Ò¸¦ °®°í ÀÖ´Â °ÍÀÌ L-value (¸Þ¸ð¸®¿¡ ÁÖ¼Ò¸¦ °¡Áö°í ÀÖ°í ÇÁ·Î±×·¡¸Ó°¡ Á÷Á¢ Á¢±Ù °¡´ÉÇÔ)
-		¿À¸¥ÂÊ¿¡ ÀÖ´Â °Í -> R-value (¸Þ¸ð¸® ¾îµò°¡¿¡ ÀÓ½Ã·Î/ÈÖ¹ßÀûÀ¸·Î ¾îµò°¡¿¡ ÀúÀåÀÌ µÇ±ä ÇÔ)
+		ì™¼ìª½ì— ìžˆëŠ” ê²ƒ -> ë³€ìˆ˜ yê°€ L-value -> ë©”ëª¨ë¦¬ì— ì£¼ì†Œë¥¼ ê°–ê³  ìžˆëŠ” ê²ƒì´ L-value (ë©”ëª¨ë¦¬ì— ì£¼ì†Œë¥¼ ê°€ì§€ê³  ìžˆê³  í”„ë¡œê·¸ëž˜ë¨¸ê°€ ì§ì ‘ ì ‘ê·¼ ê°€ëŠ¥í•¨)
+		ì˜¤ë¥¸ìª½ì— ìžˆëŠ” ê²ƒ -> R-value (ë©”ëª¨ë¦¬ ì–´ë”˜ê°€ì— ìž„ì‹œë¡œ/íœ˜ë°œì ìœ¼ë¡œ ì–´ë”˜ê°€ì— ì €ìž¥ì´ ë˜ê¸´ í•¨)
 	*/
-
+	
 	return 0;
 }
