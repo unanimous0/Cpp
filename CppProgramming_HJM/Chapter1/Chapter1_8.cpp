@@ -1,17 +1,17 @@
 /*
-	Chapter 1   C++ÀÇ ±âÃÊÀûÀÎ »ç¿ë¹ı
-	Chapter 1.8 ¿¬»êÀÚ (Operators)
+	Chapter 1   C++ì˜ ê¸°ì´ˆì ì¸ ì‚¬ìš©ë²•
+	Chapter 1.8 ì—°ì‚°ì (Operators)
 */
 
 #include <iostream>
 
 int main1_8(void)
 {
-	// Á¶°Ç ¿¬»êÀÚ (Conditional Operator)´Â c++ÀÇ À¯ÀÏÇÑ »ïÇ× ¿¬»êÀÚ (Ternary Operator)
+	// ì¡°ê±´ ì—°ì‚°ì (Conditional Operator)ëŠ” c++ì˜ ìœ ì¼í•œ ì‚¼í•­ ì—°ì‚°ì (Ternary Operator)
 
 	int x = 2;
 
-	int y = (x < 0) ? true : false;
+	int y = (x < 0) ? true : false;		// true ë©´ 1ì„, false ë©´ 0ì„ ì¶œë ¥
 	int z = (-x < 0) ? 10 : 20;
 
 	std::cout << y << std::endl;
