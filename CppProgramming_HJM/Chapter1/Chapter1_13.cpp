@@ -1,6 +1,6 @@
 /*
-	Chapter 1    C++ÀÇ ±âÃÊÀûÀÎ »ç¿ë¹ı
-	Chapter 1.13 ³×ÀÓ½ºÆäÀÌ½º (Namespace)
+	Chapter 1    C++ì˜ ê¸°ì´ˆì ì¸ ì‚¬ìš©ë²•
+	Chapter 1.13 ë„¤ì„ìŠ¤í˜ì´ìŠ¤ (Namespace)
 */
 
 #include <iostream>
@@ -48,7 +48,7 @@ namespace MySpace4
 // Namespace Ex 5
 namespace MySpace5
 {
-	namespace InnerSpace							// NP¾È¿¡ NP¸¦ ³ÖÀ» ¼ö ÀÖÀ½
+	namespace InnerSpace							// NPì•ˆì— NPë¥¼ ë„£ì„ ìˆ˜ ìˆìŒ
 	{
 		int my_function(int a, int b)
 		{
@@ -69,26 +69,26 @@ namespace MySpace5
 
 using namespace std;
 /*
-	* <iostream> °ú std namespace
-	* * <iostream> ÆÄÀÏ ¾È¿¡¼­ cout, cin, endl µîÀº std namespace ¾È¿¡ Á¤ÀÇµÇ¾î ÀÖÀ½ (iostram -> std namespace -> cout, cin, endl)
-	* * <iostream> ¹®¼­·Î ÀÌµ¿ÇÏ¸é ÇØ´ç ÇÔ¼öµéÀÌ _STD_BEGIN°ú _STD_END ¸ÅÅ©·Îµé·Î °¨½ÎÁ®ÀÖ°í ±× ¾È¿¡ Á¤ÀÇµÇ¾îÀÖÀ½
-	* * * ÇØ´ç ¸ÅÅ©·Î´Â ¿ì¸®°¡ À§¿¡¼­ Á¤ÀÇÇÑ namespace MySpace1 {}ÀÇ ºê¶óÅ¶('{}')µé°ú °°À½
+	* <iostream> ê³¼ std namespace
+	* * <iostream> íŒŒì¼ ì•ˆì—ì„œ cout, cin, endl ë“±ì€ std namespace ì•ˆì— ì •ì˜ë˜ì–´ ìˆìŒ (iostram -> std namespace -> cout, cin, endl)
+	* * <iostream> ë¬¸ì„œë¡œ ì´ë™í•˜ë©´ í•´ë‹¹ í•¨ìˆ˜ë“¤ì´ _STD_BEGINê³¼ _STD_END ë§¤í¬ë¡œë“¤ë¡œ ê°ì‹¸ì ¸ìˆê³  ê·¸ ì•ˆì— ì •ì˜ë˜ì–´ìˆìŒ
+	* * * í•´ë‹¹ ë§¤í¬ë¡œëŠ” ìš°ë¦¬ê°€ ìœ„ì—ì„œ ì •ì˜í•œ namespace MySpace1 {}ì˜ ë¸Œë¼í‚·('{}')ë“¤ê³¼ ê°™ìŒ
 */
 
 
 int main()
 {
-	cout << MySpace1::doSomething(4, 3) << endl << endl;	// 4 + 3 = 7ÀÌ ½ÇÇàµÊ
+	cout << MySpace1::doSomething(4, 3) << endl << endl;			// 4 + 3 = 7ì´ ì‹¤í–‰ë¨
 
-	cout << MySpace2::doSomething(4, 3) << endl << endl;	// 4 - 3 = 1ÀÌ ½ÇÇàµÊ
+	cout << MySpace2::doSomething(4, 3) << endl << endl;			// 4 - 3 = 1ì´ ì‹¤í–‰ë¨
 
-	cout << doSomething(4, 3) << endl << endl;				// 4 * 3 = 12°¡ ½ÇÇàµÊ
-															// ¿¹¸¦ µé¾î Namespace Ex 3, Áï namespace°¡ ¾ø´Â doSomethingÀÌ Á¤ÀÇµÇÁö ¾ÊÀº »óÈ²¿¡¼­
-															// ±×³É doSomethingÀ» È£ÃâÇÏ¸é ½Äº°ÀÚ(Indentifier)¸¦ Ã£À» ¼ö ¾ø´Ù´Â ¿¡·¯°¡ ¹ß»ıÇÔ 
-															// -> Namespace¿¡ Á¤ÀÇµÈ ÇÔ¼ö¸¦ È£ÃâÇÏ·Á¸é Namespace°¡ ÇÊ¿äÇÔ
+	cout << doSomething(4, 3) << endl << endl;				// 4 * 3 = 12ê°€ ì‹¤í–‰ë¨
+										// ì˜ˆë¥¼ ë“¤ì–´ Namespace Ex 3, ì¦‰ namespaceê°€ ì—†ëŠ” doSomethingì´ ì •ì˜ë˜ì§€ ì•Šì€ ìƒí™©ì—ì„œ
+										// ê·¸ëƒ¥ doSomethingì„ í˜¸ì¶œí•˜ë©´ ì‹ë³„ì(Indentifier)ë¥¼ ì°¾ì„ ìˆ˜ ì—†ë‹¤ëŠ” ì—ëŸ¬ê°€ ë°œìƒí•¨ 
+										// -> Namespaceì— ì •ì˜ëœ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ë ¤ë©´ Namespaceê°€ í•„ìš”í•¨
 
 	using namespace MySpace1;
-	// cout << doSomething(4, 3) << endl<< endl;			// ÀÌ·¸°Ô ÇÒ °æ¿ì ¿¡·¯ ¹ß»ı -> NS1 doSomething°ú ÀÏ¹İ doSomehtingÀÌ Áßº¹µÊ
+	// cout << doSomething(4, 3) << endl<< endl;				// ì´ë ‡ê²Œ í•  ê²½ìš° ì—ëŸ¬ ë°œìƒ -> NS1 doSomethingê³¼ ì¼ë°˜ doSomehtingì´ ì¤‘ë³µë¨
 
 	using namespace MySpace4;
 	cout << doAnything(4, 3) << endl << endl;
