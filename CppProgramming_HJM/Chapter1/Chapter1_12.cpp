@@ -1,17 +1,17 @@
 /*
-	Chapter 1    C++ÀÇ ±âÃÊÀûÀÎ »ç¿ë¹ý
-	Chapter 1.12 ¸µÅ· ¿¡·¯ (Linking Error) & Çì´õ °¡µå (Header Guards)
+	Chapter 1    C++ì˜ ê¸°ì´ˆì ì¸ ì‚¬ìš©ë²•
+	Chapter 1.12 ë§í‚¹ ì—ëŸ¬ (Linking Error) & í—¤ë” ê°€ë“œ (Header Guards)
 */
 
 /*
 	* Linking Error
-	* Çì´õÆÄÀÏÀ» ¸¸µé ¶§ Linking Error°¡ ¹ß»ýÇÏ´Â ÀÌÀ¯
-	* * ¼±¾ð (Declaration)°ú Á¤ÀÇ (Definition)À» ºÐ¸®ÇÏ±â ¶§¹®¿¡ »ý±æ ¼öµµ ÀÖ´Â °Í
+	* í—¤ë”íŒŒì¼ì„ ë§Œë“¤ ë•Œ Linking Errorê°€ ë°œìƒí•˜ëŠ” ì´ìœ 
+	* * ì„ ì–¸ (Declaration)ê³¼ ì •ì˜ (Definition)ì„ ë¶„ë¦¬í•˜ê¸° ë•Œë¬¸ì— ìƒê¸¸ ìˆ˜ë„ ìžˆëŠ” ê²ƒ
 	 
-	* ÄÄÆÄÀÏ ¿¡·¯ (Syntax Error)°¡ ¾Æ´Ñ Linking Error°¡ ¹ß»ýÇÏ´Â ÀÌÀ¯
-	* * ÄÄÆÄÀÏ·¯´Â »ç¿ëµÇ´Â ÇÔ¼öÀÇ ÇÁ·ÎÅä Å¸ÀÔÀ» ¼±¾ðÇÑ Forward Declaration¸¸ È®ÀÎÀÌ µÇ¸é ºôµå¸¦ ÁøÇàÇÔ
-	* * ±×·¯³ª ±×°Ô ½ÇÁ¦·Î ¾î¶»°Ô ÀÛµ¿ÇÏ´ÂÁö¿¡ ´ëÇÑ ¸öÃ¼°¡ ¾øÀ¸¸é, Áï Á¤ÀÇµÇÁö ¾ÊÀ¸¸é 
-	* * Linking ÇÒ ¶§, ¸öÃ¼¸¦ ¸øÃ£¾Æ¼­ Linking Error°¡ ¹ß»ýÇÏ´Â °Í
+	* ì»´íŒŒì¼ ì—ëŸ¬ (Syntax Error)ê°€ ì•„ë‹Œ Linking Errorê°€ ë°œìƒí•˜ëŠ” ì´ìœ 
+	* * ì»´íŒŒì¼ëŸ¬ëŠ” ì‚¬ìš©ë˜ëŠ” í•¨ìˆ˜ì˜ í”„ë¡œí†  íƒ€ìž…ì„ ì„ ì–¸í•œ Forward Declarationë§Œ í™•ì¸ì´ ë˜ë©´ ë¹Œë“œë¥¼ ì§„í–‰í•¨
+	* * ê·¸ëŸ¬ë‚˜ ê·¸ê²Œ ì‹¤ì œë¡œ ì–´ë–»ê²Œ ìž‘ë™í•˜ëŠ”ì§€ì— ëŒ€í•œ ëª¸ì²´ê°€ ì—†ìœ¼ë©´, ì¦‰ ì •ì˜ë˜ì§€ ì•Šìœ¼ë©´ 
+	* * Linking í•  ë•Œ, ëª¸ì²´ë¥¼ ëª»ì°¾ì•„ì„œ Linking Errorê°€ ë°œìƒí•˜ëŠ” ê²ƒ
 */
 
 
@@ -41,23 +41,23 @@
 
 /*
 	* Header Guards (== Include Guards)
-	* Çì´õ°¡µå°¡ ¾ø´Â °æ¿ì ¹ß»ýÇÏ´Â ¹®Á¦ -> ÇÔ¼ö°¡ Áßº¹µÇ¾î Á¤ÀÇµÇ´Â °æ¿ì ¸µÅ· ¿¡·¯°¡ ¹ß»ýÇÔ
-	* µû¶ó¼­ Á¤ÀÇ°¡ Áßº¹µÇ´Â °æ¿ì ÇÑ ¹ø¸¸ Á¤ÀÇµÇ¸é µÈ´Ù°í ¾Ë·ÁÁÖ¸é µÊ -> pragma once
+	* í—¤ë”ê°€ë“œê°€ ì—†ëŠ” ê²½ìš° ë°œìƒí•˜ëŠ” ë¬¸ì œ -> í•¨ìˆ˜ê°€ ì¤‘ë³µë˜ì–´ ì •ì˜ë˜ëŠ” ê²½ìš° ë§í‚¹ ì—ëŸ¬ê°€ ë°œìƒí•¨
+	* ë”°ë¼ì„œ ì •ì˜ê°€ ì¤‘ë³µë˜ëŠ” ê²½ìš° í•œ ë²ˆë§Œ ì •ì˜ë˜ë©´ ëœë‹¤ê³  ì•Œë ¤ì£¼ë©´ ë¨ -> pragma once
 	
-	* À§ÀÇ ¿¹¿¡¼­ (pragma once¸¦ ÁÖ¼®Ã³¸® ÇØµÐ »óÅÂ) ¸µÅ· ¿¡·¯°¡ ¹ß»ýÇÏ´Â ÀÌÀ¯
-	* * Çì´õÆÄÀÏÀ» ºÒ·¯¿À´Â °ÍÀº »ç½Ç ±× ¾È¿¡ Æ÷ÇÔµÈ ³»¿ëÀ» ±×´ë·Î ºÒ·¯¿À´Â °Í°ú °°À½
-	* * Áï main ÆÄÀÏ¿¡¼­ doSomething.h¿Í multiply.h¸¦ µÑ ´Ù include Çß´Ù¸é 
-	* * doSomething Çì´õ ÆÄÀÏ ³»ºÎ¿¡ ÀÌ¹Ì multiply Çì´õ ÆÄÀÏÀÌ include µÇ¾ú±â ¶§¹®¿¡ 
-	* * main ÆÄÀÏ¿¡¼­´Â #include "doSomething.h"¿¡¼­ ÇÑ ¹ø, 
-	* * #include "multiply.h"¿¡¼­ ÇÑ ¹ø, ÃÑ µÎ ¹øÀ¸·Î multiply ÇÔ¼ö°¡ Áßº¹ Á¤ÀÇµÇ¾î¹ö¸²
-	* * ±×·¡¼­ ¸µÅ· ¿¡·¯°¡ ¹ß»ýÇÔ -> µû¶ó¼­ main ÆÄÀÏ¿¡¼­µç doSomehting Çì´õÆÄÀÏ¿¡¼­µç
-	* * #include "multiply.h" ¸¦ ÇÏ³ª´Â Á¦°ÅÇØÁà¾ß ¸µÅ· ¿¡·¯°¡ ¹ß»ýÇÏÁö ¾ÊÀ½
+	* ìœ„ì˜ ì˜ˆì—ì„œ (pragma onceë¥¼ ì£¼ì„ì²˜ë¦¬ í•´ë‘” ìƒíƒœ) ë§í‚¹ ì—ëŸ¬ê°€ ë°œìƒí•˜ëŠ” ì´ìœ 
+	* * í—¤ë”íŒŒì¼ì„ ë¶ˆëŸ¬ì˜¤ëŠ” ê²ƒì€ ì‚¬ì‹¤ ê·¸ ì•ˆì— í¬í•¨ëœ ë‚´ìš©ì„ ê·¸ëŒ€ë¡œ ë¶ˆëŸ¬ì˜¤ëŠ” ê²ƒê³¼ ê°™ìŒ
+	* * ì¦‰ main íŒŒì¼ì—ì„œ doSomething.hì™€ multiply.hë¥¼ ë‘˜ ë‹¤ include í–ˆë‹¤ë©´ 
+	* * doSomething í—¤ë” íŒŒì¼ ë‚´ë¶€ì— ì´ë¯¸ multiply í—¤ë” íŒŒì¼ì´ include ë˜ì—ˆê¸° ë•Œë¬¸ì— 
+	* * main íŒŒì¼ì—ì„œëŠ” #include "doSomething.h"ì—ì„œ í•œ ë²ˆ, 
+	* * #include "multiply.h"ì—ì„œ í•œ ë²ˆ, ì´ ë‘ ë²ˆìœ¼ë¡œ multiply í•¨ìˆ˜ê°€ ì¤‘ë³µ ì •ì˜ë˜ì–´ë²„ë¦¼
+	* * ê·¸ëž˜ì„œ ë§í‚¹ ì—ëŸ¬ê°€ ë°œìƒí•¨ -> ë”°ë¼ì„œ main íŒŒì¼ì—ì„œë“  doSomehting í—¤ë”íŒŒì¼ì—ì„œë“ 
+	* * #include "multiply.h" ë¥¼ í•˜ë‚˜ëŠ” ì œê±°í•´ì¤˜ì•¼ ë§í‚¹ ì—ëŸ¬ê°€ ë°œìƒí•˜ì§€ ì•ŠìŒ
 	
-	* * ±×·¯³ª ÀÌ·¯ÇÑ Áßº¹ Á¤ÀÇ¸¦ ¸·¾ÆÁÖ´Â °ÍÀÌ Çì´õ°¡µå #pragma once ("Áßº¹µÉ °æ¿ì ÇÑ ¹ø¸¸ Á¤ÀÇÇØ¶ó")
+	* * ê·¸ëŸ¬ë‚˜ ì´ëŸ¬í•œ ì¤‘ë³µ ì •ì˜ë¥¼ ë§‰ì•„ì£¼ëŠ” ê²ƒì´ í—¤ë”ê°€ë“œ #pragma once ("ì¤‘ë³µë  ê²½ìš° í•œ ë²ˆë§Œ ì •ì˜í•´ë¼")
 */
 
 
-int main()
+int main1_12()
 {
 	doSomething();
 
