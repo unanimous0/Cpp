@@ -6,6 +6,6 @@ void doSomething2()
 #ifdef LIKE_APPLE						
 	cout << "doSomething2 Apple" << endl;			
 #else									
-	cout << "doSomething2 Orange" << endl;		// #define LIKE_APPLE ¸ÅÅ©·Î´Â ´Ù¸¥ cpp ÆÄÀÏ¿¡ Á¤ÀÇµÇ¾î ÀÖÀ¸¹Ç·Î
-#endif											// ÀÌ ÆÄÀÏ¿¡¼­´Â ¸ÅÅ©·Î°¡ Á¤ÀÇµÇÁö ¾Ê¾Ò´Ù°í ÆÇ´ÜÇÔ -> ±×·¡¼­ Orange Ãâ·Â
+	cout << "doSomething2 Orange" << endl;		// #define LIKE_APPLE ë§¤í¬ë¡œëŠ” ë‹¤ë¥¸ cpp íŒŒì¼ì— ì •ì˜ë˜ì–´ ìžˆìœ¼ë¯€ë¡œ
+#endif							// ì´ íŒŒì¼ì—ì„œëŠ” ë§¤í¬ë¡œê°€ ì •ì˜ë˜ì§€ ì•Šì•˜ë‹¤ê³  íŒë‹¨í•¨ -> ê·¸ëž˜ì„œ Orange ì¶œë ¥
 }
