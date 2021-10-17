@@ -101,5 +101,3 @@ int main1_13()
 
 	return 0;
 }
-
-
