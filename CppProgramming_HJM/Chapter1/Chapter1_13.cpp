@@ -77,7 +77,7 @@ using namespace std;
 */
 
 
-int main()
+int main1_13()
 {
 	cout << MySpace1::nsCheck(4, 3) << endl << endl;			// 4 + 3 = 7이 실행됨
 
