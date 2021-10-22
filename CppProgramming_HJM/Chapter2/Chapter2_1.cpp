@@ -1,6 +1,6 @@
 /*
-	Chapter 2   º¯¼öÀÇ ±âº» ÀÚ·áÇü
-	Chapter 2.1 ±âº» ÀÚ·áÇü ¼Ò°³
+	Chapter 2   ë³€ìˆ˜ì˜ ê¸°ë³¸ ìë£Œí˜•
+	Chapter 2.1 ê¸°ë³¸ ìë£Œí˜• ì†Œê°œ
 */
 
 #include <iostream>
@@ -13,38 +13,64 @@ int main()
 	int j = 3;
 	int i = -1;
 	int k = 123;
-	char a = 'H';
+	char ch = 'H';
 
-	cout << (uintptr_t)static_cast<void*>(&a) << endl;
+	cout << (uintptr_t)static_cast<void*>(&ch) << endl;
 	cout << (uintptr_t)static_cast<void*>(&i) << endl;
 
 
-	bool bValue1 = true;					// true -> 1 (³»ºÎÀûÀ¸·Î true¸¦ ¼ıÀÚ 1·Î ÀúÀåÇÔ)
-	bool bValue2 = false;					// false ->0 (³»ºÎÀûÀ¸·Î false¸¦ ¼ıÀÚ 0À¸·Î ÀúÀåÇÔ)
+	bool bValue1 = true;					// true -> 1 (ë‚´ë¶€ì ìœ¼ë¡œ trueë¥¼ ìˆ«ì 1ë¡œ ì €ì¥í•¨)
+	bool bValue2 = false;					// false -> 0 (ë‚´ë¶€ì ìœ¼ë¡œ falseë¥¼ ìˆ«ì 0ìœ¼ë¡œ ì €ì¥í•¨)
 
 	cout << (bValue1 ? 1 : 0) << endl;
 
 	char chValue = 'A';
 
 	cout << chValue << endl;
-	cout << int(chValue) << endl;			// A¿¡ ´ëÀÀµÇ´Â ¼ıÀÚ 65°¡ Ãâ·ÂµÊ
+	cout << int(chValue) << endl;				// Aì— ëŒ€ì‘ë˜ëŠ” ìˆ«ì 65ê°€ ì¶œë ¥ë¨
 
 	char chValueNum = 65;
 
-	cout << chValueNum << endl;				// char(65) ÀÌ¹Ç·Î 65¿¡ ÇØ´çÇÏ´Â A°¡ Ãâ·ÂµÊ
+	cout << chValueNum << endl;				// char(65) ì´ë¯€ë¡œ 65ì— í•´ë‹¹í•˜ëŠ” Aê°€ ì¶œë ¥ë¨
 
-	float fValue = 3.141592f;				// floatÀÇ °æ¿ì ¼ıÀÚ µÚ¿¡ f¸¦ ºÙ¿©ÁÜ -> f»©¸é ¿À·ù³² (f¾øÀ¸¸é double·Î ÀÎ½ÄÇÏ±â ¶§¹®)
-	double dValue = 3.141592;				// doubleÀÇ °æ¿ì ¼ıÀÚ µÚ¿¡ ¾Æ¹«°Íµµ ºÙÀÌÁö ¾ÊÀ½ (doubleÀÌ floatÀÇ µÎ¹èÀÌ¹Ç·Î ´õ Á¤¹ĞÇÔ)
+	float fValue = 3.141592f;				// floatì˜ ê²½ìš° ìˆ«ì ë’¤ì— fë¥¼ ë¶™ì—¬ì¤Œ -> fë¹¼ë©´ ì˜¤ë¥˜ë‚¨ (fì—†ìœ¼ë©´ doubleë¡œ ì¸ì‹í•˜ê¸° ë•Œë¬¸)
+	double dValue = 3.141592;				// doubleì˜ ê²½ìš° ìˆ«ì ë’¤ì— ì•„ë¬´ê²ƒë„ ë¶™ì´ì§€ ì•ŠìŒ (doubleì´ floatì˜ ë‘ë°°ì´ë¯€ë¡œ ë” ì •ë°€í•¨)
 
-	cout << fValue << endl;					// Ãâ·ÂÇÏ¸é °ªÀÌ Â©¸² (3.14159±îÁö¸¸ Ãâ·ÂµÊ)
-	cout << dValue << endl;					// cout¿¡¼­ Ãâ·ÂÇÒ ¶§ ÀÚ¸´ ¼ö¸¦ ¸ÂÃçÁÖ´Ùº¸´Ï Â©¸° °Í
-											// ³»ºÎÀûÀ¸·Î 3.141592¸¦ Á¤È®È÷°Ô ÀÌÁø¼ö·Î ½Ç¼ö¸¦ Ç¥ÇöÇÏ´Â ¹ıÀ¸·Î ¹Ù²ã¼­ ÀúÀåÇÏ°í ÀÖÀ½
+	cout << fValue << endl;					// ì¶œë ¥í•˜ë©´ ê°’ì´ ì§¤ë¦¼ (3.14159ê¹Œì§€ë§Œ ì¶œë ¥ë¨)
+	cout << dValue << endl;					// coutì—ì„œ ì¶œë ¥í•  ë•Œ ìë¦¿ ìˆ˜ë¥¼ ë§ì¶°ì£¼ë‹¤ë³´ë‹ˆ ì§¤ë¦° ê²ƒ
+											// ë‚´ë¶€ì ìœ¼ë¡œ 3.141592ë¥¼ ì •í™•íˆê²Œ ì´ì§„ìˆ˜ë¡œ ì‹¤ìˆ˜ë¥¼ í‘œí˜„í•˜ëŠ” ë²•ìœ¼ë¡œ ë°”ê¿”ì„œ ì €ì¥í•˜ê³  ìˆìŒ
 
-	auto aValue1 = 3.141592f;				// ÆÄÀÌ½ãÃ³·³ ÄÄÆÄÀÏÇÒ ¶§ Å¸ÀÔÀÌ °áÁ¤µÊ
-	auto aValue2 = 3.141592;				// ºôµåÇÏ°í º¯¼ö¿¡ ¸¶¿ì½º¸¦ °®´Ù´ë¸é Å¸ÀÔÀÌ ¶ä	
+	auto aValue1 = 3.141592f;				// íŒŒì´ì¬ì²˜ëŸ¼ ì»´íŒŒì¼í•  ë•Œ íƒ€ì…ì´ ê²°ì •ë¨
+	auto aValue2 = 3.141592;				// ë¹Œë“œí•˜ê³  ë³€ìˆ˜ì— ë§ˆìš°ìŠ¤ë¥¼ ê°–ë‹¤ëŒ€ë©´ íƒ€ì…ì´ ëœ¸	
 
-	cout << aValue1 << endl;
-	cout << aValue2 << endl;
+	cout << sizeof(aValue1) << " Bytes" << endl;		// ë°”ì´íŠ¸ ë‹¨ìœ„ì˜ í¬ê¸°ê°€ ë‚˜ì˜´
+	cout << sizeof(aValue2) << " Bytes" << endl;
+
+	cout << sizeof(bool) << " Bytes" << endl;		// sizeof() í•¨ìˆ˜ëŠ” íƒ€ì…ì„ ë„£ì–´ë„ í¬ê¸°ê°€ ë‚˜ì˜´
+	cout << sizeof(char) << " Bytes" << endl;
+	cout << sizeof(float) << " Bytes" << endl;
+	cout << sizeof(double) << " Bytes" << endl;
+
+
+	// ì´ˆê¸°í™” ë°©ì‹
+	int a = 123;			// copying initialization
+	int b(123);			// direct initialization		-> ê°ì²´ì§€í–¥ì—ì„œ ì§ì ‘ë§Œë“  íƒ€ì…ì„ ì´ˆê¸°í™”í•  ë•Œ ë§ì´ ì‚¬ìš©
+	int c{ 123 };			// uniform initialization		-> ê°ì²´ì§€í–¥ì—ì„œ ì§ì ‘ë§Œë“  íƒ€ì…ì„ ì´ˆê¸°í™”í•  ë•Œ ë§ì´ ì‚¬ìš© (ìµœê·¼ì—ëŠ” uniformì„ ì„ í˜¸)
+
+	// uniformì„ ì„ í˜¸í•˜ëŠ” ì´ìœ  -> ë” ì—„ê²©í•¨ (ì•„ë˜ ì˜ˆì‹œ ì°¸ê³ )
+	int aa = 1.23;			// warningì´ ëœ¨ì§€ë§Œ ì¸ìœ„ì  ìºìŠ¤íŒ…ì„ ì§„í–‰í•´ ì‹¤í–‰ì€ ë¨ -> Possible loss of data (ë°ì´í„° íƒ€ì…ì˜ ì‚¬ì´ì¦ˆì— ë”°ë¼ ì •ë°€ë„ê°€ ë‹¬ë¼ì§ˆ ìˆ˜ ìˆìŒ)
+	int bb(1.23);			// warningì´ ëœ¨ì§€ë§Œ ì¸ìœ„ì  ìºìŠ¤íŒ…ì„ ì§„í–‰í•´ ì‹¤í–‰ì€ ë¨ -> Possible loss of data (ë°ì´í„° íƒ€ì…ì˜ ì‚¬ì´ì¦ˆì— ë”°ë¼ ì •ë°€ë„ê°€ ë‹¬ë¼ì§ˆ ìˆ˜ ìˆìŒ)
+	//int cc{ 1.23 };		// errorê°€ ëœ¨ë©´ì„œ ì‹¤í–‰ì´ ì•ˆë¨
+
+
+	// ì—¬ëŸ¬ ë³€ìˆ˜ ë™ì‹œ ì„ ì–¸
+	//int k, l;					// ê°™ì€ ë°ì´í„°íƒ€ì…ë§Œ ê°€ëŠ¥
+	int kk, ll = 123;				// llë³€ìˆ˜ë§Œ 123ìœ¼ë¡œ ì´ˆê¸°í™”  -> ì¶”ì²œí•˜ì§€ ì•ŠëŠ” ë°©ì‹
+	int kkk, lll = 123, mmm = 456;			// kkkë§Œ ì´ˆê¸°í™” ë˜ì§€ ëª»í•¨   -> ì¶”ì²œí•˜ì§€ ì•ŠëŠ” ë°©ì‹
+	int kkkk = 123, llll(456), mmmm{ 789 };		// ê°ê°ì˜ ë°©ì‹ìœ¼ë¡œ ì´ˆê¸°í™” ë¨ -> ì¶”ì²œí•˜ì§€ ì•ŠëŠ” ë°©ì‹
+	//cout << kk << endl;				// "Uninitialized local variable 'kk' used" ì—ëŸ¬ ë°œìƒ
+	cout << ll << endl;
+
 
 	return 0;
 }
