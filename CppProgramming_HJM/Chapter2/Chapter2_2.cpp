@@ -1,6 +1,6 @@
 /*
-	Chapter 2   º¯¼öÀÇ ±âº» ÀÚ·áÇü
-	Chapter 2.2 Á¤¼öÇü (Integers)
+	Chapter 2   ë³€ìˆ˜ì˜ ê¸°ë³¸ ìë£Œí˜•
+	Chapter 2.2 ì •ìˆ˜í˜• (Integers)
 */
 
 #include <iostream>
@@ -17,10 +17,10 @@ int main2_2()
 	std::cout << "short     size: " << sizeof(short) << " Bytes" << std::endl;		// 2 Bytes (16 Bits)
 	std::cout << "int       size: " << sizeof(int) << " Bytes" << std::endl;		// 4 Bytes (32 Bits)
 	std::cout << "long      size: " << sizeof(long) << " Bytes" << std::endl;		// 4 Bytes (32 Bits)
-	std::cout << "long long size: " << sizeof(long long) << " Bytes" << std::endl;	// 8 Bytes (64 Bits)
+	std::cout << "long long size: " << sizeof(long long) << " Bytes" << std::endl;		// 8 Bytes (64 Bits)
 
-	// Ç¥Çö °¡´ÉÇÑ ¼ö
-	std::cout << std::pow(2, sizeof(short) * 8 - 1) - 1 << std::endl;				// ºÎÈ£ ¶§¹®¿¡ 1 »©ÁÖ°í, 0 ¶§¹®¿¡ 1 »©ÁÜ
+	// í‘œí˜„ ê°€ëŠ¥í•œ ìˆ˜
+	std::cout << std::pow(2, sizeof(short) * 8 - 1) - 1 << std::endl;			// ë¶€í˜¸ ë•Œë¬¸ì— 1 ë¹¼ì£¼ê³ , 0 ë•Œë¬¸ì— 1 ë¹¼ì¤Œ
 	std::cout << std::numeric_limits<short>::max() << std::endl;
 	std::cout << std::numeric_limits<short>::min() << std::endl;
 	std::cout << std::numeric_limits<short>::lowest() << std::endl;
@@ -29,25 +29,25 @@ int main2_2()
 	// Overflow
 	short max_s = 32767;
 	max_s += 1;
-	std::cout << "Expected Value: 32768" << std::endl;			// ±â´ë°ª: 32,768
-	std::cout << "Real Value: " << max_s << std::endl;			// ½ÇÁ¦°ª: -32,768 -> Overflow Çö»ó -> µÚ·Î µ¹¾Æ°¡¼­ ¿ÀÈ÷·Á °¡Àå ÀÛÀº ¼ö°¡ Ãâ·ÂµÇ´Â °Í
+	std::cout << "Expected Value: 32768" << std::endl;		// ê¸°ëŒ€ê°’: 32,768
+	std::cout << "Real Value: " << max_s << std::endl;		// ì‹¤ì œê°’: -32,768 -> Overflow í˜„ìƒ -> ë’¤ë¡œ ëŒì•„ê°€ì„œ ì˜¤íˆë ¤ ê°€ì¥ ì‘ì€ ìˆ˜ê°€ ì¶œë ¥ë˜ëŠ” ê²ƒ
 
 	short min_s = std::numeric_limits<short>::min();
 	min_s -= 1;
-	std::cout << "Expected Value: -32768" << std::endl;			// ±â´ë°ª: -32,769
-	std::cout << "Real Value: " << min_s << std::endl;			// ½ÇÁ¦°ª: 32,767 -> Overflow Çö»ó -> ¾ÕÀ¸·Î µ¹¾Æ°¡¼­ ¿ÀÈ÷·Á °¡Àå Å« ¼ö°¡ Ãâ·ÂµÇ´Â °Í
+	std::cout << "Expected Value: -32768" << std::endl;		// ê¸°ëŒ€ê°’: -32,769
+	std::cout << "Real Value: " << min_s << std::endl;		// ì‹¤ì œê°’: 32,767 -> Overflow í˜„ìƒ -> ì•ìœ¼ë¡œ ëŒì•„ê°€ì„œ ì˜¤íˆë ¤ ê°€ì¥ í° ìˆ˜ê°€ ì¶œë ¥ë˜ëŠ” ê²ƒ
 
 	// (un)signed Overflow
-	unsigned int ui = -1;						// ºÎÈ£ ¾ø´Â Å¸ÀÔÀÇ int¿¡ À½¼ö¸¦ ³ÖÀ½
-	std::cout << ui << std::endl;				// Overflow°¡ ¹ß»ıÇÏ¿© ¾ÕÀ¸·Î µ¹¾Æ°¡¼­ ¿ÀÈ÷·Á °¡Àå Å« ¼ö¸¦ Ãâ·ÂÇÔ 
-												// -> ¹®Á¦: ÄÄÆÄÀÏ·¯°¡ ÀÚµ¿À¸·Î °ªÀ» ¹Ù²Ù°í °æ°í »Ó¸¸ ¾Æ´Ï¶ó ¿¡·¯µµ ¹ß»ı½ÃÅ°Áö ¾ÊÀ½
+	unsigned int ui = -1;						// ë¶€í˜¸ ì—†ëŠ” íƒ€ì…ì˜ intì— ìŒìˆ˜ë¥¼ ë„£ìŒ
+	std::cout << ui << std::endl;					// Overflowê°€ ë°œìƒí•˜ì—¬ ì•ìœ¼ë¡œ ëŒì•„ê°€ì„œ ì˜¤íˆë ¤ ê°€ì¥ í° ìˆ˜ë¥¼ ì¶œë ¥í•¨ 
+									// -> ë¬¸ì œ: ì»´íŒŒì¼ëŸ¬ê°€ ìë™ìœ¼ë¡œ ê°’ì„ ë°”ê¾¸ê³  ê²½ê³  ë¿ë§Œ ì•„ë‹ˆë¼ ì—ëŸ¬ë„ ë°œìƒì‹œí‚¤ì§€ ì•ŠìŒ
 
 
-	int i2 = 20 / 4;							// 5°¡ Ãâ·ÂµÇ¸ç ¹®Á¦ ¾øÀ½
-	int i3 = 23 / 4;							// 5°¡ Ãâ·ÂµÇ¸ç ¼Ò¼öÁ¡À» ¹ö¸² (¹İ¿Ã¸² ¾Æ´Ô)
+	int i2 = 20 / 4;						// 5ê°€ ì¶œë ¥ë˜ë©° ë¬¸ì œ ì—†ìŒ
+	int i3 = 23 / 4;						// 5ê°€ ì¶œë ¥ë˜ë©° ì†Œìˆ˜ì ì„ ë²„ë¦¼ (ë°˜ì˜¬ë¦¼ ì•„ë‹˜)
 	std::cout << i3 << std::endl;
-	std::cout << (float)23 / 4 << std::endl;	// 5.75°¡ Ãâ·ÂµÊ -> (float)À¸·Î Á¤¼ö 23À» ¼Ò¼ö 23À¸·Î Ä³½ºÆÃ
-												// ¿¬»ê¿¡¼­ float¿Í int·Î ¿¬»êÇÏ¸é °á°ú¸¦ float·Î ³ªÅ¸³¿
+	std::cout << (float)23 / 4 << std::endl;			// 5.75ê°€ ì¶œë ¥ë¨ -> (float)ìœ¼ë¡œ ì •ìˆ˜ 23ì„ ì†Œìˆ˜ 23ìœ¼ë¡œ ìºìŠ¤íŒ…
+									// ì—°ì‚°ì—ì„œ floatì™€ intë¡œ ì—°ì‚°í•˜ë©´ ê²°ê³¼ë¥¼ floatë¡œ ë‚˜íƒ€ëƒ„
 
 	return 0;
 }
