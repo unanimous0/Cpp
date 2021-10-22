@@ -10,7 +10,7 @@ void my_function(void)
 
 }
 
-int main()
+int main2_4()
 {
 
 	int i = 123;
