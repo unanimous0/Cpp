@@ -6,7 +6,7 @@
 #include <iostream>
 #include <bitset>
 
-int main()
+int main2_1()
 {
 	using namespace std;
 
