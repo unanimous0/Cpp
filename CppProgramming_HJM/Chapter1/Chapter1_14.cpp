@@ -23,7 +23,7 @@ void doSomething1()
 {
 	#ifdef LIKE_APPLE					// 위에서 정의한 LIKE_APPLE 매크로는 Chapter1_14.cpp 파일에서 정의했으므로
 	cout << "doSomething1 Apple" << endl;	    		// 이 파일 안에서만 적용됨 -> 따라서 함수 안에서도 매크로 사용 가능
-#else								// 단, 이 함수가 다른 cpp 파일에 있을 경우 매크로 사용 불가 -> macro_check.cpp 파일 확인
+	#else							// 단, 이 함수가 다른 cpp 파일에 있을 경우 매크로 사용 불가 -> macro_check.cpp 파일 확인
 	cout << "doSomething1 Orange" << endl;
 	#endif
 }
