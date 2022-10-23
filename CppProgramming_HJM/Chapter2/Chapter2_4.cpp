@@ -12,23 +12,28 @@ void my_function(void)
 
 int main2_4()
 {
+	//void var_void;		      // void는 메모리를 차지하지 않기 때문에 변수 선언을 할 수 없음
 
+	void* var_void;			      // 포인터 변수로는 만들 수 있음 (주소값을 가짐)
+
+	
 	int i = 123;
-	float f = 123.456f;
+	float j = 123.456f;
 
-	//void my_void1;		      // void는 메모리를 차지하지 않기 때문에 변수 선언을 할 수 없음
+	cout << &i << endl;         // 0x16b0ab30c		// 정수형 변수의 주소값 &i
+	cout << &j << endl;         // 0x16b0ab308		// 실수형 변수의 주소값 &f
 
-	void* my_void2;			      // 포인터 변수로는 만들 수 있음 (주소값을 가짐)
-	void* my_void3;
+	void *my_void1;
+	void *my_void2;
 
-	my_void2 = (void*)&i;	    // 정수형 변수의 주소값 &i
-	my_void3 = (void*)&f;	    // 실수형 변수의 주소값 &f
+	cout << my_void1 << endl;   // 0x104d57cf4
+	cout << my_void2 << endl;   // 0xa222800104e5ac80
 
-	std::cout << &i << std::endl;
-	std::cout << &f << std::endl << std::endl;
+	my_void1 = (void*)&i;
+	my_void2 = (void*)&j;
 
-	std::cout << my_void2 << std::endl;
-	std::cout << my_void3 << std::endl;
+	cout << my_void1 << endl;   // 0x16b0ab30c
+	cout << my_void2 << endl;   // 0x16b0ab308
 
 	/*
 		* 포인터 타입 캐스팅 
