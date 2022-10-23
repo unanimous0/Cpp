@@ -3,6 +3,7 @@
 void doSomething2()
 {
 	using namespace std;
+	
 	#ifdef LIKE_APPLE						
 	cout << "doSomething2 Apple" << endl;			
 	#else									
