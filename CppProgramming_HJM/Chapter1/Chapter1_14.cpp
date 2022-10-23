@@ -43,7 +43,7 @@ int main1_14()
 	cout << std::max(1 + 3, 2) << endl;		    	// max라는 함수가 algorithm이라는 헤더파일의 std 네임스페이스 안에 정의된 것
 								// std 네임스페이스가 <iostream>에만 있는 것이 아니고 어느 헤더 파일 내에서
                                             			// std 네임스페이스를 만들었으면 그 안에 정의된 함수 등을 std::를 통해서 사용할 수 있는 것
-                                            			// -> 이러한 이유로 using namespace std; 는 구분되도록 {} 안에서 사용하는 것이 좋다?
+                                            			// -> 이러한 이유로 using namespace std; 는 구분되도록 global 보다는 {} 안에서 사용하는 것이 좋음
 
 
 	// 전처리기 & 매크로를 이용해 Conditional Compliation (조건에 따른 컴파일)을 다른 방식으로 수행하는 방법
